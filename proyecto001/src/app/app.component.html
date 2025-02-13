@@ -1,4 +1,16 @@
 <div>
-  <h1>Tu nombre {{nombre}} y tienes {{edad}} años</h1>
+  <h3>Interpolación</h3>
+  <p>Tu nombre {{nombre}} y tienes {{edad}} años</p>
   <p>{{esFumador()}}</p>
+</div>
+<div>
+  <h3>Directiva *ngIf</h3>
+  <p *ngIf="edad>=18; else menoredad">Es mayor de edad</p>
+  <ng-template #menoredad><p>Es menor de edad</p></ng-template>
+</div>
+<div>
+  <h3>Directiva *ngFor</h3>
+   <select name="" id="">
+    <option *ngFor="let provincia of provincias" [value]="provincia.id">{{provincia.nombre}}</option>
+   </select>
 </div>
