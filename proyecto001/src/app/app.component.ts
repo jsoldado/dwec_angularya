@@ -25,4 +25,13 @@ export class AppComponent {
     return this.fumador?"Sí es fumador":"No es fumador";
   }
 
+  contador=0;
+
+  incrementar(){
+    this.contador++;
+  }
+
+  decrementar(){
+    this.contador--;
+  }
 }

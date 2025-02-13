@@ -14,3 +14,7 @@
     <option *ngFor="let provincia of provincias" [value]="provincia.id">{{provincia.nombre}}</option>
    </select>
 </div>
+<div>
+  <h3>Directiva ngModel</h3>
+  <input type="text" [(ngModel)]="nombre">
+</div>
