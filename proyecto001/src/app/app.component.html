@@ -18,3 +18,9 @@
   <h3>Directiva ngModel</h3>
   <input type="text" [(ngModel)]="nombre">
 </div>
+<div>
+  <h3>Captura de eventos</h3>
+  <p>{{contador}}</p>
+  <button (click)="decrementar()" >-</button>
+  <button (click)="incrementar()" >+</button>
+</div>
