@@ -1,0 +1,16 @@
+.dado {
+    margin: 5px;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    transition: all 0.5s;
+}
