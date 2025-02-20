@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prueba_disparo_eventos';
+
+  mousemoveApp(evt:any){
+    console.log('mousemoveApp', evt.clientX, evt.clientY);
+  }
+
+  
 }
