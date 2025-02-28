@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from '../../services/peliculas.service';
+import { IPelicula } from '../../models/ipelicula';
 
 @Component({
   selector: 'app-listado-peliculas',
@@ -9,17 +10,24 @@ import { PeliculasService } from '../../services/peliculas.service';
 })
 export class ListadoPeliculasComponent implements OnInit{
 
+  search:string = '';
+  tipo:string = '';
+  peliculas:IPelicula[] = [];
+
   constructor(private servicePeliculas:PeliculasService) { }
 
-
   ngOnInit(): void {
-    this.servicePeliculas.buscarPelicula('batman').subscribe((data)=>{
-      console.log(data.Search);
-      console.log(data.Search[0].Poster);
-      console.log(data.totalResults);
-    });
+    //
   }
 
+  buscar(){
+    this.servicePeliculas.buscarPelicula(this.search,this.tipo).subscribe((data)=>{
+      console.log(data.Search);
+      //console.log(data.Search[0].Poster);
+      console.log(data.totalResults);
+      this.peliculas = data.Search;
+    });
+  }
 
 
 }

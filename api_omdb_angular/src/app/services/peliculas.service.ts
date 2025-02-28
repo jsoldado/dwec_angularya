@@ -12,7 +12,7 @@ export class PeliculasService {
 
   constructor(private httpClient:HttpClient) { }
 
-  public buscarPelicula(pelicula:string){
-    return this.httpClient.get<IResponse>(`${URL}?apikey=${API_KEY}&s=${pelicula}`);
+  public buscarPelicula(pelicula:string,tipo:string){
+    return this.httpClient.get<IResponse>(`${URL}?apikey=${API_KEY}&s=${pelicula}&type=${tipo}`);
   }
 }

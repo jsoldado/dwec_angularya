@@ -7,6 +7,7 @@ import { ListadoPeliculasComponent } from './components/listado-peliculas/listad
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

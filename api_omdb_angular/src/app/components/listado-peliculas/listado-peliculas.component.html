@@ -1,1 +1,39 @@
-<p>listado-peliculas works!</p>
+    <h2>Consumo API OMDB</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label" for="input-nombre">Nombre:</label><input type="text" [(ngModel)]="search" class="form-control" name="input-nombre" id="input-nombre">
+        </div>
+        <div class="col">
+            <label  class="form-label" for="select-tipo">Tipo:</label>
+            <select class="form-select" [(ngModel)]="tipo" name="select-tipo" id="select-tipo">
+                <option value="">Todos</option>
+                <option value="movie">Película</option>
+                <option value="series">Series</option>
+                <option value="episode">Episodio</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <input class="btn btn-primary" type="button" (click)="buscar()" id="btn-buscar" value="Buscar">
+   
+    <br><br>
+    <div id="detalles"></div>
+    <table class="table" id="table-peliculas">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Año</th>
+                <th>Tipo</th>
+                <th>Poster</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pelicula of peliculas">
+                <td>{{pelicula.Title}}</td>
+                <td>{{pelicula.Year}}</td>
+                <td>{{pelicula.Type}}</td>
+                <td><img *ngIf="pelicula.Poster!='N/A'" src="{{pelicula.Poster}}" alt="{{pelicula.Title}}" width="50"></td>
+            </tr>
+        </tbody>
+    </table>
