@@ -1,0 +1,16 @@
+<div style="max-width: 90%; margin: 1rem auto; ">
+
+
+<mat-toolbar style="border-radius: 1rem;">
+  <button mat-button [matMenuTriggerFor]="articulos">Artículos</button>
+
+  <mat-menu #articulos="matMenu">
+    <a mat-menu-item routerLink="listado-articulos">Listado</a>
+    <a mat-menu-item routerLink="crear-articulo">Crear</a>
+  </mat-menu>
+</mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+</div>
+

@@ -1,0 +1,13 @@
+<div class="contenedor">
+ 
+    <mat-form-field>
+      <input matInput [(ngModel)]="articulo.descripcion" type="text" placeholder="Ingrese descripción">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [(ngModel)]="articulo.precio" type="number" placeholder="Ingrese precio">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="editar()">Editar</button>
+  
+  </div>
