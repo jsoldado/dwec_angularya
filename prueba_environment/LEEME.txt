@@ -1,0 +1,32 @@
+// Proyecto para ver el uso de dos ficheros enviroment para desarrollo y producción
+
+Documentación:
+https://v17.angular.io/guide/build
+
+Pasos:
+Crear un nuevo directorio src/environments
+
+Crear los ficheros:
+environment.ts
+environment.prod.ts
+
+Y modifica el fichero angular.json en la sección production:
+"fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+
+Lanzar proyecto en modo desarrollo
+ng serve
+ng serve --configuration=development
+
+Lanzar el proyecto en modo producción:
+ng serve --configuration=production
+
+Compilar el proyecto en modo producción:
+ng build
+
+Para compilar en modo desarrollo (menos habitual) habría que usar:
+ng build --configuration=development
